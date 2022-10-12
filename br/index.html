@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-166034456-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-166034456-3');
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0572283b45.js"></script>
+    <style>
+      body {
+        font-family: 'Lato', sans-serif;
+        background-image: url("bg.jpeg");
+        background-color: rgba(255, 255, 255, .9);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-blend-mode: lighten;
+      }
+      .base-timer {
+        position: relative;
+        width: 300px;
+        height: 300px;
+      }
+
+      .base-timer__svg {
+        transform: scaleX(-1);
+      }
+
+      .base-timer__circle {
+        fill: none;
+        stroke: none;
+      }
+
+      .base-timer__path-elapsed {
+        stroke-width: 7px;
+        stroke: grey;
+      }
+
+      .base-timer__path-remaining {
+        stroke-width: 7px;
+        stroke-linecap: round;
+        transform: rotate(90deg);
+        transform-origin: center;
+        transition: 1s linear all;
+        fill-rule: nonzero;
+        stroke: currentColor;
+      }
+
+      .base-timer__path-remaining.green {
+        color: rgb(65, 184, 131);
+      }
+
+      .base-timer__path-remaining.orange {
+        color: orange;
+      }
+
+      .base-timer__path-remaining.red {
+        color: red;
+      }
+
+      .base-timer__label {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 48px;
+      }
+      .bold {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K7FBNWP"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <nav class="navbar bg-red justify-content-center text-center pt-3" style="background-color: #BF0A0A;">
+      <h5 style="font-weight: bold; color: white;">
+        <i class="fas fa-exclamation-triangle mr-2"></i>Usted y otras 5 personas fueron seleccionados para esta promoción. ¡Continuar hacia abajo! 👇
+      </h5>
+    </nav>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="countdown text-center" style="display: flex; justify-content: center;">
+            <div id="app"></div>
+          </div>
+          <br>
+          <br>
+          <h3 style="text-align: center;"><strong>&iexcl;HEY, ESPERA!&nbsp;</strong></h3>
+          <h4 style="text-align: center;"><strong><br></strong></h4>
+          <h2 style="text-align: center;"><strong>&iquest;Le gustar&iacute;a obtener un 37% de descuento en nuestro programa M&aacute;quina de Quemar Grasa?</strong></h2>
+          <br>
+          <h4>Siga leyendo y descubra c&oacute;mo...</h4>
+          <br>
+          <h4>Ah... por cierto, ver&aacute;s esta p&aacute;gina SOLO UNA VEZ (para siempre)&nbsp;</h4>
+          <br>
+          <h4>&iexcl;Y la raz&oacute;n es porque fuiste SELECCIONADO para una oportunidad &uacute;nica y exclusiva para los nuevos participantes de &quot;M&aacute;quina de Queimar Grasa&quot;!</h4>
+          <br>
+          <h3><strong>&iquest;Que significa eso?</strong></h3>
+          <br>
+          <h4>Que por cada 100 personas que acceden a nuestra p&aacute;gina al mismo tiempo&hellip; &iexcl;sacamos UNA de ellas para participar de este descuento exclusivo!&nbsp;</h4>
+          <br>
+          <h4>Y hoy es tu d&iacute;a de suerte...</h4>
+          <br>
+          <h4><strong>Aprovecha este descuento, porque no se volver&aacute; a repetir...</strong></h4>
+          <br>
+          <h4>&iexcl;Y ac&eacute;rcate al cuerpecito con el que siempre has so&ntilde;ado, y recupera tu autoestima en menos de 2 meses!</h4>
+          <br>
+          <h4>(Recordatorio: &iexcl;esta ventana de oportunidad se bloquear&aacute; tan pronto como se reinicie el temporizador!)&nbsp;</h4>
+          <br>
+          <h4>&iexcl;Este descuento solo es v&aacute;lido ahora, ahora mismo!&nbsp;</h4>
+          <br>
+          <h4>Desde $80 hasta solo $17 en efectivo.</h4>
+          <br>
+          <h4>Para recibir este descuento exclusivo, haga clic en el bot&oacute;n verde debajo de esta p&aacute;gina y pague un 37% de descuento.&nbsp;</h4>
+          <br>
+          <h3><strong>&iquest;Alguna vez te has preguntado qu&eacute; podr&iacute;a significar esto para ti hoy?</strong></h3>
+          <br>
+          <ul>
+              <li>
+                  <h4>Aplana tu vientre y adelgaza tu cintura...</h4>
+              </li>
+              <br>
+              <li>
+                  <h4>Quema la grasa que sigue saliendo del pantal&oacute;n o la que sigue marcando el sujetador...</h4>
+              </li>
+              <br>
+              <li>
+                  <h4>Elimina la famosa ri&ntilde;onera en un tiempo r&eacute;cord...</h4>
+              </li>
+              <br>
+              <li>
+                  <h4>M&iacute;rate al espejo y si&eacute;ntete orgulloso de la imagen que ves...</h4>
+              </li>
+              <br>
+              <li>
+                  <h4>Ponerse un bikini en la playa y sentirse seguro y causar envidia a tus amigos...</h4>
+              </li>
+          </ul>
+          <br>
+          <h4><strong>&iquest;Y adivina qu&eacute;?</strong></h4>
+          <br>
+          <h4>No hay necesidad de suicidarse haciendo ejercicio f&iacute;sico s&uacute;per intenso, en gimnasios abarrotados y comiendo nada m&aacute;s que pollo a la parrilla y un poco de ensalada...</h4>
+          <br>
+          <h3><strong>Es por eso que M&aacute;quina de Quemar Grasa ofrece la gu&iacute;a paso a paso garantizada que lo lleva del punto A al punto B...</strong></h3>
+          <br>
+          <ul>
+              <li>
+                  <h4><strong>Receta secreta de la India &quot;T&eacute; terminador de grasas&quot;...</strong> Este no es solo un t&eacute; que est&aacute; acostumbrado a ver en Brasil. &iexcl;Aprender&aacute; las proporciones exactas de especias, t&eacute; y otros ingredientes dise&ntilde;ados para estimular su metabolismo y convertir su cuerpo en una trituradora de grasa blanca! NOTA: &iexcl;Esta receta por s&iacute; sola cambiar&aacute; su vida por completo!</h4>
+              </li>
+              <br>
+              <li>
+                  <h4><strong>C&oacute;mo aumentar los niveles de &quot;hormona quemagrasa&quot; en un 1300% en mujeres y un 2000% en hombres&hellip;</strong> Para que tu cuerpo se convierta en una hoguera ardiente de quema de grasa incluso mientras duermes, porque esta hormona sigue activa hasta 48 horas despu&eacute;s de su uso.Atenci&oacute;n: &iexcl;este m&eacute;todo ha sido probado y testado por expertos en la materia!</h4>
+              </li>
+              <br>
+              <li>
+                  <h4><strong>El secreto del &quot;combustible de grasa blanca&quot;...</strong> que obliga a su cuerpo a dejar de usar el az&uacute;car como su principal fuente de energ&iacute;a para que solo quede la grasa beneficiosa.</h4>
+              </li>
+              <br>
+              <li>
+                  <h4><strong>La t&eacute;cnica del &quot;Acelerador de tiroides&quot;...</strong> Aumente su nivel de tiroides a 11 casi autom&aacute;ticamente y tenga el &quot;truco&quot; que impulsar&aacute; su p&eacute;rdida de peso con m&aacute;s consistencia.</h4>
+              </li>
+              <br>
+              <li>
+                  <h4><strong>La &ldquo;M&aacute;quina de la Juventud Natural&rdquo; que se mueve en la ra&iacute;z de tu piel volvi&eacute;ndose m&aacute;s suave e incluso como una adolescente&hellip;</strong> &iexcl;Incluso si es &quot;mayor&quot; de edad y fuma 1 paquete al d&iacute;a durante a&ntilde;os! NOTA: &iexcl;Haga esto una vez al d&iacute;a durante 20 d&iacute;as y vea qu&eacute; sucede!</h4>
+              </li>
+              <br>
+              <li>
+                  <h4><strong>&iquest;Est&aacute;s cansado de estar gru&ntilde;&oacute;n todo el tiempo?</strong> Te voy a ense&ntilde;ar un truco simple que reduce los qu&iacute;micos de la depresi&oacute;n en tu cerebro casi instant&aacute;neamente y conduce a una mejora significativa en tu estado de &aacute;nimo en solo 2 d&iacute;as.</h4>
+              </li>
+              <br>
+              <li>
+                  <h4><strong>&iquest;Sufre de diabetes tipo 2? (&iquest;O su m&eacute;dico le ha advertido que es prediab&eacute;tico y necesita actuar ahora?)...</strong> Descubrir&aacute;s c&oacute;mo reducir tu riesgo de desarrollar diabetes tipo 2 en un 33% sin hacer nada m&aacute;s complicado que beber este t&eacute; indonesio que puedes encontrar f&aacute;cilmente en cualquier tienda naturista.</h4>
+              </li>
+              <br>
+              <li>
+                  <h4><strong>El truco del &quot;interruptor de saciedad&quot;...</strong> Descubra c&oacute;mo bloquear el impulso de picar alimentos &quot;no deseados&quot; con este truco de 5 segundos.</h4>
+              </li>
+              <br>
+              <li>
+                  <h4><strong>Descubra el m&eacute;todo &quot;M&aacute;quina del Tiempo de Insulina&quot;...</strong> La principal causa de la resistencia a la insulina es el aumento de peso, &iexcl;aprender&aacute; a desbloquear por completo cualquier nivel de resistencia a la insulina y perder peso m&aacute;s f&aacute;cilmente!&nbsp;</h4>
+              </li>
+              <br>
+              <li>
+                  <h4><strong>C&oacute;mo aumentar su libido hasta en un 83,8%</strong> con esta comida barata (poco conocida) que encuentras en cualquier tienda de comestibles de la esquina que aumentar&aacute; tu energ&iacute;a y disposici&oacute;n para hacer cualquier cosa, si sabes a qu&eacute; me refiero.&nbsp;</h4>
+              </li>
+              <br>
+              <li>
+                  <h4><strong>La maldad de la &quot;Dieta Boomerang&quot;...</strong> porque siempre parece estar cada vez m&aacute;s hinchado y menos saludable despu&eacute;s de hacer cualquier tipo de dieta de moda. Descubra este m&eacute;todo f&aacute;cil (tan pronto como sea posible) que asegurar&aacute; el fin del &quot;efecto acorde&oacute;n&quot;. PD: Este m&eacute;todo es tan poderoso que por s&iacute; solo valdr&iacute;a la pena el precio de $50.00.</h4>
+              </li>
+              <br>
+              <li>
+                  <h4><strong>Un simple truco para aumentar tu densidad &oacute;sea&hellip;</strong> Hazte m&aacute;s fuerte y resistente en tu rutina de running con este truco popularmente conocido en Jap&oacute;n.</h4>
+              </li>
+              <br>
+              <li>
+                  <h4><strong>C&oacute;mo reducir la inflamaci&oacute;n que causa c&aacute;ncer</strong> en todo el cuerpo sin medicamentos peligrosos y costosos utilizando este ingrediente natural de &Aacute;frica que se encuentra en el mercado de barrio.&nbsp;</h4>
+              </li>
+              <br>
+              <li>
+                  <h4><strong>Y mucho, mucho m&aacute;s...</strong></h4>
+              </li>
+          </ul>
+          <br>
+          <h3><strong>A partir de ahora, la decisi&oacute;n es 100% tuya...</strong></h3>
+          <br>
+          <h4>&iexcl;As&iacute; que te invito a que te registres ahora mismo antes de que se acabe el tiempo!</h4>
+          <br>
+          <h4>Haga clic en el bot&oacute;n de abajo y disfrute...</h4>
+          <br>
+          <a class="btn btn-success btn-lg btn-block p-3 mb-2" href="https://go.hotmart.com/Y64416962U?ap=e0f3" style="font-size: 200%; font-family: 'Oswald', sans-serif; white-space: normal;">¡QUIERO GARANTIZAR UN 30% DE DESCUENTO!</a>
+          <br>
+          <h3><strong>Ahora recuerda:&nbsp;</strong></h3>
+          <br>
+          <h4>Adem&aacute;s del descuento exclusivo&hellip; todav&iacute;a tiene nuestra GARANT&Iacute;A ARMADA de &quot;usted con el cuerpo que desea o le devolvemos todo su dinero, sin burocracia, sin preguntas&quot;.&nbsp;</h4>
+          <br>
+          <h4>Es muy simple, si no te ENCANTA por completo la &ldquo;m&aacute;quina quemagrasas&rdquo; y no sientes que tu peso o tu barriga disminuyen en los primeros 7 d&iacute;as...</h4>
+          <br>
+          <h4>As&iacute; que por favor&hellip;&nbsp;</h4>
+          <br>
+          <h4>INSISTO que env&iacute;e un correo electr&oacute;nico a nuestro equipo de soporte que le reembolsaremos cada centavo que invirti&oacute; lo antes posible...&iexcl;SIN PREGUNTAS!</h4>
+          <br>
+          <h4>Y con el descuento especial de hoy, ahorrar&aacute; $63.00</h4>
+          <br>
+          <a class="btn btn-success btn-lg btn-block p-3 mb-2" href="https://go.hotmart.com/Y64416962U?ap=e0f3" style="font-size: 200%; font-family: 'Oswald', sans-serif; white-space: normal;">¡QUIERO GARANTIZAR UN 30% DE DESCUENTO!</a>
+          <br>
+          <h4>Pruebe la &ldquo;M&aacute;quina quemagrasas&rdquo; gratis durante 7 d&iacute;as sin riesgos y observe c&oacute;mo su cuerpo literalmente derrite toda la grasa no deseada casi instant&aacute;neamente.&nbsp;</h4>
+          <br>
+          <h4>Literalmente puse mi mano en el fuego de la &quot;M&aacute;quina de Quemar Grasa&quot;.&nbsp;</h4>
+          <br>
+          <h4>&quot;Est&aacute; bien, pero &iquest;c&oacute;mo puedo acceder?&quot;&nbsp;</h4>
+          <br>
+          <ul>
+              <li>
+                  <h4><strong>Paso 1:</strong> Haga clic en el bot&oacute;n verde de arriba y seleccione su m&eacute;todo de pago.</h4>
+              </li>
+              <br>
+              <li>
+                  <h4><strong>Paso 2:</strong> Al realizar la compra recibir&aacute;s todo el material que necesitas en tu correo electr&oacute;nico.</h4>
+              </li>
+              <br>
+              <li>
+                  <h4><strong>Paso 3:</strong> &iexcl;Accede a tu correo electr&oacute;nico registrado con la compra para seguir todo el proceso y perder peso para siempre!</h4>
+              </li>
+          </ul>
+          <br>
+          <h3><strong>Vea los resultados de la &quot;M&aacute;quina de Quemar Grasa&quot; en la pr&aacute;ctica...</strong></h3>
+          <br>
+          <a class="btn btn-success btn-lg btn-block p-3 mb-2" href="https://go.hotmart.com/Y64416962U?ap=e0f3" style="font-size: 200%; font-family: 'Oswald', sans-serif; white-space: normal;">¡QUIERO GARANTIZAR UN 30% DE DESCUENTO!</a>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      const FULL_DASH_ARRAY = 283;
+      const WARNING_THRESHOLD = 10;
+      const ALERT_THRESHOLD = 5;
+
+      const COLOR_CODES = {
+        info: {
+          color: "green"
+        },
+        warning: {
+          color: "orange",
+          threshold: WARNING_THRESHOLD
+        },
+        alert: {
+          color: "red",
+          threshold: ALERT_THRESHOLD
+        }
+      };
+
+      const TIME_LIMIT = 600;
+      let timePassed = 0;
+      let timeLeft = TIME_LIMIT;
+      let timerInterval = null;
+      let remainingPathColor = COLOR_CODES.info.color;
+
+      document.getElementById("app").innerHTML = `
+      <div class="base-timer">
+        <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <g class="base-timer__circle">
+            <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+            <path
+              id="base-timer-path-remaining"
+              stroke-dasharray="283"
+              class="base-timer__path-remaining ${remainingPathColor}"
+              d="
+                M 50, 50
+                m -45, 0
+                a 45,45 0 1,0 90,0
+                a 45,45 0 1,0 -90,0
+              "
+            ></path>
+          </g>
+        </svg>
+        <span id="base-timer-label" class="base-timer__label">${formatTime(
+          timeLeft
+        )}</span>
+      </div>
+      `;
+
+      startTimer();
+
+      function onTimesUp() {
+        clearInterval(timerInterval);
+      }
+
+      function startTimer() {
+        timerInterval = setInterval(() => {
+          timePassed = timePassed += 1;
+          timeLeft = TIME_LIMIT - timePassed;
+          document.getElementById("base-timer-label").innerHTML = formatTime(
+            timeLeft
+          );
+          setCircleDasharray();
+          setRemainingPathColor(timeLeft);
+
+          if (timeLeft === 0) {
+            onTimesUp();
+          }
+        }, 1000);
+      }
+
+      setInterval(function save() {
+        localStorage.setItem('timeLeft', 'timeLeft');
+       }, 1000);
+
+
+      function formatTime(time) {
+        const minutes = Math.floor(time / 60);
+        let seconds = time % 60;
+
+        if (seconds < 10) {
+          seconds = `0${seconds}`;
+        }
+
+        return `${minutes}:${seconds}`;
+      }
+
+      function setRemainingPathColor(timeLeft) {
+        const { alert, warning, info } = COLOR_CODES;
+        if (timeLeft <= alert.threshold) {
+          document
+            .getElementById("base-timer-path-remaining")
+            .classList.remove(warning.color);
+          document
+            .getElementById("base-timer-path-remaining")
+            .classList.add(alert.color);
+        } else if (timeLeft <= warning.threshold) {
+          document
+            .getElementById("base-timer-path-remaining")
+            .classList.remove(info.color);
+          document
+            .getElementById("base-timer-path-remaining")
+            .classList.add(warning.color);
+        }
+      }
+
+      function calculateTimeFraction() {
+        const rawTimeFraction = timeLeft / TIME_LIMIT;
+        return rawTimeFraction - (1 / TIME_LIMIT) * (1 - rawTimeFraction);
+      }
+
+      function setCircleDasharray() {
+        const circleDasharray = `${(
+          calculateTimeFraction() * FULL_DASH_ARRAY
+        ).toFixed(0)} 283`;
+        document
+          .getElementById("base-timer-path-remaining")
+          .setAttribute("stroke-dasharray", circleDasharray);
+      }
+    </script>
+  </body>
+</html>
